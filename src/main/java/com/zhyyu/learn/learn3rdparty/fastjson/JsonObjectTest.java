@@ -26,16 +26,16 @@ public class JsonObjectTest {
 //        System.out.println(BeanUtils.describe(outerClass1));
 
         JSONObject jsonObject = (JSONObject) JSON.toJSON(outerClass1);
-        jsonObject.entrySet().forEach(stringObjectEntry -> {
-            System.out.println(stringObjectEntry.getKey());
-            System.out.println(stringObjectEntry.getValue());
-        });
+//        jsonObject.entrySet().forEach(stringObjectEntry -> {
+//            System.out.println(stringObjectEntry.getKey());
+//            System.out.println(stringObjectEntry.getValue());
+//        });
 
         System.out.println(jsonObject);
         System.out.println(jsonObject.getJSONObject("innerClass1"));
 
-        Integer i = null;
-        System.out.println(i);
+        jsonObject.remove("outer1");
+        System.out.println(jsonObject);
     }
 
     @Data
